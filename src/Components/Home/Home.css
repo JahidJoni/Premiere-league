@@ -1,5 +1,18 @@
+.top-banner{
+    position: relative;
+}
 .banner{
     width: 100%;
+    position: static;
+}
+.greetings{
+    color: rgb(206, 206, 206);
+    position: absolute;
+    left: 34%;
+    top: 18%;
+    background-color: rgba(95, 95, 95, 0.411);
+    border-radius: 0.3rem;
+    padding: 0.5rem;
 }
 .clubs{
     display: flex;

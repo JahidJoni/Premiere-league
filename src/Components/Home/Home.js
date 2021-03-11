@@ -13,9 +13,16 @@ function Home() {
     }, []);
 
     return (
-        <div className="">
+        <div>
+            <div className="top-banner">
+                <img src={Banner} alt="" className="banner"/>
+               
+                <h4 className="greetings">
+                    This is EPL & WE BELIEVE IN FOOTBALL
+                </h4>
 
-            <img className="banner" src={Banner} alt="" fluid />
+            </div>
+            
 
             <div className="clubs mt-5">
                 {club.map(club => <Club key={club.idTeam} club={club}> </Club>)}

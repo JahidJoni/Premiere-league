@@ -4,6 +4,7 @@ import { useParams } from 'react-router';
 import { Col, Container, Row } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFacebook, faTwitter, faYoutube, faInternetExplorer} from '@fortawesome/free-brands-svg-icons'
+import { faCalendarAlt, faFlag, faFutbol, faMars } from '@fortawesome/free-solid-svg-icons'
 
 
 
@@ -17,7 +18,7 @@ const ClubDetails = () => {
             .then(res => res.json())
             .then(data => setClub(data.teams[0]))
     }, [idTeam])
-    const { strTeam, intFormedYear, strSport, strGender, strTeamFanart3, strDescriptionEN, strWebsite, strFacebook, strTwitter, strYoutube} = club;
+    const { strTeam, intFormedYear, strSport, strGender, strTeamFanart3, strTeamFanart1, strDescriptionEN, strWebsite, strFacebook, strTwitter, strYoutube} = club;
     return (
         <div>
             <div className="badgeArea">
@@ -30,14 +31,19 @@ const ClubDetails = () => {
                 <Row className="detailsArea mt-5">
                     <Col xs={12} md={6}><div className="information mt-3">
                         <h2>{strTeam}</h2> <br/>
-                        <p>Founded: {intFormedYear}</p>
-                        <p>Country: {club.strCountry}</p>
-                        <p>Sport Type: {strSport}</p>
-                        <p>Gender: {strGender}</p> 
+                        <p><FontAwesomeIcon icon={faCalendarAlt} /> Founded: {intFormedYear}</p>
+                        <p><FontAwesomeIcon icon={faFlag} /> Country: {club.strCountry}</p>
+                        <p><FontAwesomeIcon icon={faFutbol} /> Sport Type: {strSport}</p>
+                        <p><FontAwesomeIcon icon={faMars} /> Gender: {strGender}</p> 
                     </div>
                     </Col>
                     <Col xs={12} md={6}> <div>
-                        <img src={strTeamFanart3} alt="" className="team-photo"/>
+                        {
+                           strGender==='Male'?
+                           <img src={strTeamFanart3} alt="" className="team-photo"/>:<img src={strTeamFanart1} alt="" className="team-photo"/>
+
+                        }
+                        
                     </div>
                     </Col>
                 </Row>
