@@ -8,6 +8,7 @@ import { faCalendarAlt, faFlag, faFutbol, faMars } from '@fortawesome/free-solid
 
 
 
+
 const ClubDetails = () => {
     const { idTeam } = useParams();
 
@@ -18,10 +19,10 @@ const ClubDetails = () => {
             .then(res => res.json())
             .then(data => setClub(data.teams[0]))
     }, [idTeam])
-    const { strTeam, intFormedYear, strSport, strGender, strTeamFanart3, strTeamFanart1, strDescriptionEN,  strFacebook, strTwitter, strYoutube} = club;
+    const { strTeam, intFormedYear, strSport, strGender, strTeamFanart3, strTeamFanart1, strDescriptionEN,  strFacebook, strTwitter, strYoutube, strStadiumThumb} = club;
     return (
         <div>
-            <div className="badgeArea">
+            <div className="badgeArea" style={{ width:'100%', backgroundImage: `url(${strStadiumThumb})`, backgroundSize: "cover", backgroundPositionY:"center"}}>
                 <div className="badge">
                     <img src={club.strTeamBadge} alt="" className="logo" />
                 </div>
