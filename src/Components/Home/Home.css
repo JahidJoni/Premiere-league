@@ -24,22 +24,22 @@
     padding-top: 0.5rem;
 }
 .clubs{
-    background-image: url('../../Images/pexels-aleksandar-pasaric-1323712.jpg');
+    background-image: url('../../Images/white-bg.jpg');
     background-position: cover;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
-@media only screen and (max-width: 350px){
+@media only screen and (max-width: 360px){
  .greetings{
      font-size: 12px;
-     left: 15%;
+     left: 11%;
  }
 }
-@media (min-width: 351px) and (max-width: 600px){
+@media (min-width: 361px) and (max-width: 600px){
     .greetings{
         font-size: 16px;
-        left: 16%;
+        left: 17%;
         padding: 0.1rem;
     }
 }

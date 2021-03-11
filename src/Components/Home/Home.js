@@ -17,15 +17,9 @@ function Home() {
     return (
         <div>
             <div className="top-banner">
-                <img src={Banner} alt="" className="banner"/>
-               
-                <h4 className="greetings">
-                    This is EPL & WE BELIEVE IN FOOTBALL
-                </h4>
-
+                <img src={Banner} alt="" className="banner"/>            
+                <h4 className="greetings">This is EPL & WE BELIEVE IN FOOTBALL</h4>
             </div>
-            
-
             <div>
                 <h5 className="massage"> Click the explore button & see the details! <FontAwesomeIcon icon={faForward} /></h5>
                 <div className="clubs">

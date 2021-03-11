@@ -4,7 +4,7 @@ import {Link} from "react-router-dom";
 import './Header.css'
 const Header = () => {
     return (
-        <Navbar bg="dark" expand="lg">
+        <Navbar bg="dark" expand="lg" sticky="top">
             <Container>
                 <Navbar.Brand as={Link} to="/"> <span className="brandName">Premier League</span> </Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
