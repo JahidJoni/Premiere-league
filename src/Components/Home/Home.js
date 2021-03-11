@@ -18,7 +18,7 @@ function Home() {
             <img className="banner" src={Banner} alt="" fluid />
 
             <div className="clubs mt-5">
-                {club.map(club => <Club key={club.idLeague} club={club}>  </Club>)}
+                {club.map(club => <Club key={club.idTeam} club={club}> </Club>)}
             </div>
         </div>
     );
