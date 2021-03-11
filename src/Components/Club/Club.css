@@ -1,0 +1,13 @@
+img{
+    width: 25%;
+}
+.details{
+ text-align: center;
+ background-image: url('../../Images/Blur-Wallpapers-21-1920-x-1200.jpg');
+ background-size: cover;
+ margin: 0.8rem;
+ padding: 0.8rem  0rem;
+ border-radius: 3px;
+ box-shadow: 3px 3px 5px gray;
+ color: rgb(235, 235, 235);
+}

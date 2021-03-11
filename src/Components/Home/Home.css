@@ -1,0 +1,8 @@
+.banner{
+    width: 100%;
+}
+.clubs{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
