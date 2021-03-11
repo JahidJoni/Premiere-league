@@ -3,7 +3,7 @@ import './ClubDetails.css'
 import { useParams } from 'react-router';
 import { Col, Container, Row } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faFacebook, faTwitter, faYoutube, faInternetExplorer} from '@fortawesome/free-brands-svg-icons'
+import { faFacebook, faTwitter, faYoutube} from '@fortawesome/free-brands-svg-icons'
 import { faCalendarAlt, faFlag, faFutbol, faMars } from '@fortawesome/free-solid-svg-icons'
 
 
@@ -18,7 +18,7 @@ const ClubDetails = () => {
             .then(res => res.json())
             .then(data => setClub(data.teams[0]))
     }, [idTeam])
-    const { strTeam, intFormedYear, strSport, strGender, strTeamFanart3, strTeamFanart1, strDescriptionEN, strWebsite, strFacebook, strTwitter, strYoutube} = club;
+    const { strTeam, intFormedYear, strSport, strGender, strTeamFanart3, strTeamFanart1, strDescriptionEN,  strFacebook, strTwitter, strYoutube} = club;
     return (
         <div>
             <div className="badgeArea">
@@ -40,7 +40,8 @@ const ClubDetails = () => {
                     <Col xs={12} md={6}> <div>
                         {
                            strGender==='Male'?
-                           <img src={strTeamFanart3} alt="" className="team-photo"/>:<img src={strTeamFanart1} alt="" className="team-photo"/>
+                           <img src={strTeamFanart3} alt="" className="team-photo"/>
+                           :<img src={strTeamFanart1} alt="" className="team-photo"/>
 
                         }
                         
@@ -52,7 +53,6 @@ const ClubDetails = () => {
                     </div>
 
                 <div className="socialLink">
-                    <a href={`https://${strWebsite}`} target="blank" className="icons"><FontAwesomeIcon icon={faInternetExplorer} size="lg" /></a>
                     <a href={`https://${strFacebook}`} target="blank" className="icons"><FontAwesomeIcon icon={faFacebook} size="lg"/></a>
                     <a href={`https://${strTwitter}`} target="blank" className="icons"><FontAwesomeIcon icon={faTwitter} size="lg"/></a>
                     <a href={`https://${strYoutube}`} target="blank" className="icons"><FontAwesomeIcon icon={faYoutube} size="lg"/></a>

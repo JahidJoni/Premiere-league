@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import Club from '../Club/Club';
 import Banner from '../../Images/banner1.jpg';
 import './Home.css'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faForward } from '@fortawesome/free-solid-svg-icons'
 
 
 function Home() {
@@ -24,8 +26,11 @@ function Home() {
             </div>
             
 
-            <div className="clubs mt-5">
+            <div>
+                <h5 className="massage"> Click the explore button & see the details! <FontAwesomeIcon icon={faForward} /></h5>
+                <div className="clubs">
                 {club.map(club => <Club key={club.idTeam} club={club}> </Club>)}
+                </div>
             </div>
         </div>
     );
